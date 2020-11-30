@@ -1,0 +1,113 @@
+.cal-view {
+    background-color: #fff;
+    border-top: 1px solid #e1e1e1 !important;
+    * {
+        box-sizing: border-box;
+    }
+    .cal-day-headers {
+        border-color: #e1e1e1 !important;
+        border-top: 0;
+        display: flex;
+        border: 1px solid;
+        span {
+            font-weight: 400;
+            opacity: .5;
+        }
+        .cal-past {
+            color: darkgray;
+        }
+        .cal-weekend {
+            span {
+                color: #8b0000;
+            }
+        }
+        .cal-today {
+            b {
+                color: tomato;
+            }
+        }
+        .cal-header {
+            flex: 1;
+            text-align: center;
+            padding: 5px;
+            cursor: pointer;
+        }
+        .cal-header-active {
+            background-color: #00bbd39c;
+        }
+        .cal-header:first-child {
+            border-left-color: #e1e1e1 !important;
+            border-left: 1px solid;
+        }
+        .cal-header:not(:last-child) {
+            border-right-color: #e1e1e1 !important;
+            border-right: 1px solid;
+        }
+    }
+    .cal-time-events {
+        border-color: #e1e1e1 !important;
+        position: relative;
+        border: 1px solid;
+        border-top: 0;
+        -js-display: flex;
+        display: flex;
+        .time-row {
+            display: flex;
+            height: 60px;
+            .time-label-column {
+                width: 80px;
+                height: 100%;
+                .time {
+                    font-weight: 700;
+                    padding-top: 18px;
+                    width: 70px;
+                    text-align: center;
+                }
+            }
+            .time-columns {
+                display: flex;
+                flex-grow: 1;
+            }
+            .time-column {
+                position: relative;
+                border-left-color: #e1e1e1 !important;
+                flex-grow: 1;
+                border-left: 1px solid;
+                flex: 1;
+                text-align: center;
+                padding: 5px;
+                color: #1e90ff;
+                .event {
+                    width: calc(100% - 2px);
+                    height: calc(100% - 2px);
+                    margin: 1px;
+                    padding: 0 5px;
+                    line-height: 25px;
+                    font-size: 12px;
+                    border: 1px solid;
+                }
+                .reserved {
+                    background-color: rgb(250, 227, 227);
+                    border-color: rgb(173, 33, 33);
+                }
+                .disabled {
+                    background-color: #1c1e1fbf;
+                    border-color: #1c1e1f;
+                    color: white;
+                    padding-top: 12px;
+                }
+                .locked {
+                    background-color: #2626267d;
+                    color: black;
+                    border-color: #1c1e1f;
+                    padding-top: 12px;
+                }
+                .not-reserved {
+                    background-color: rgb(209, 232, 255);
+                    border-color: rgb(30, 144, 255);
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
